@@ -1,7 +1,9 @@
 class BooksController < ApplicationController
   before_filter :require_login, :find_books
+  respond_to :html, :json
 
   def index
+    respond_with @books
   end
   
   private

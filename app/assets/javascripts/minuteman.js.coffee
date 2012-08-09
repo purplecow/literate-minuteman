@@ -3,7 +3,6 @@ window.Minuteman =
   Collections: {}
   Views: {}
   Routers: {}
-  init: -> alert 'Hello from Backbone!'
-
-$(document).ready ->
-  Minuteman.init()
+  init: (data) ->
+    books = new Minuteman.Collections.Books(data)
+    $("#books").append(new Minuteman.Views.BooksIndex(books: books).render().el)
