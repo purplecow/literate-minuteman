@@ -10,13 +10,13 @@ gem 'dynamic_form'
 gem 'resque'
 gem 'resque-scheduler'
 gem 'will_paginate'
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
 gem 'json'
+
+gem 'backbone-on-rails'
+gem 'jquery-rails'
+
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,10 +37,3 @@ group :test do
   gem 'capybara-webkit'
   gem 'database_cleaner'
 end
-
-gem 'jquery-rails'
-
-# Deploy with Capistrano
-gem 'capistrano'
-gem 'rvm-capistrano'
-
