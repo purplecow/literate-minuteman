@@ -7,3 +7,5 @@
       %span.divider / 
       = @book.get('author')
     %ul.results
+      Copies: 
+      = @book.get('copies').length
