@@ -3,6 +3,7 @@ window.Minuteman =
   Collections: {}
   Views: {}
   Routers: {}
-  init: (data) ->
-    books = new Minuteman.Collections.Books(data)
-    $("#books").append(new Minuteman.Views.BooksIndex(books: books).render().el)
+  init: () ->
+    books = new Minuteman.Collections.Books()
+    $("#books").append(new Minuteman.Views.BooksIndex(books).render().el)
+    books.fetch()

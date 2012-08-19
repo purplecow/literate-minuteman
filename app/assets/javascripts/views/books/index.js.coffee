@@ -1,6 +1,11 @@
 class Minuteman.Views.BooksIndex extends Backbone.View
   initialize: (books) ->
+    _.bindAll(this, 'render')
+
     @books = books
+    @books.bind('reset', @render)
+    @books.bind('change', @render)
+    
   render: ->
     $(@el).html('')
     @books.books.each (book) =>
