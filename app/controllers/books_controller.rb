@@ -8,13 +8,7 @@ class BooksController < ApplicationController
   
   private
   def find_books
-    if @user.locations.any?
-      @books = @user.books.with_copies_at(@user.locations)
-    else
-      @books = @user.books.with_copies
-    end
-    @books = @books.paginate(:page => params[:page])
-    @not_found = @user.books.without_copies
     @locations = @user.selected_locations
+    @books = @user.books.includes(copies: :location).all
   end
 end

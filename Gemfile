@@ -18,6 +18,9 @@ gem 'jquery-rails'
 gem 'capistrano'
 gem 'rvm-capistrano'
 
+gem 'rabl'
+gem 'yajl-ruby'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

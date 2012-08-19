@@ -1,2 +1,9 @@
-.book
-  = @book.get('title')
+.book.book-result
+  .image 
+    %img{src: @book.get('image_url')}
+  .data
+    %h2 
+      = @book.get('title')
+      %span.divider / 
+      = @book.get('author')
+    %ul.results
